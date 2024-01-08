@@ -315,6 +315,7 @@ export default class App extends Vue {
     }
 
     suggest(query: string) {
+        console.log("suggest");
         if (query !== "" && query != null) {
             this.lastSuggestQuery = query;
             SucheService.getSuggestions(query)
