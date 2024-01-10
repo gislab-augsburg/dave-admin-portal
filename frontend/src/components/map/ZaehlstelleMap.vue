@@ -365,6 +365,10 @@ export default class ZaehlstelleMap extends Vue {
                     )
                 );
             } else {
+                console.log(
+                    "setMarkerToMap(zaehlstelle): " +
+                        JSON.stringify(anzeigeKarte)
+                );
                 markers.push(
                     this.createMarkerForZaehlstelle(
                         anzeigeKarte as ZaehlstelleKarteDTO
@@ -545,6 +549,12 @@ export default class ZaehlstelleMap extends Vue {
     private markerOptionsMessstelle(messstelleKarte: MessstelleKarteDTO) {
         let defaultIcon = new Icon.Default();
         defaultIcon.options.iconUrl = markerIconDiamondViolet;
+        console.log(
+            "markerOptionsMessstelle: " +
+                defaultIcon.options.iconUrl +
+                " " +
+                JSON.stringify(defaultIcon.options)
+        );
         if (this.zId) {
             if (this.zId === messstelleKarte.id) {
                 defaultIcon.options.iconUrl = markerIconDiamondRed;

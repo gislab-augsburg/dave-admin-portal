@@ -362,6 +362,10 @@ export default class App extends Vue {
                         }
                     );
 
+                    console.log(
+                        "messstelle-suggestions: " +
+                            suggestions.messstellenSuggests.length
+                    );
                     suggestions.messstellenSuggests.forEach(
                         (messstelle: SucheMessstelleSuggestDTO) => {
                             this.suggestions.push(
